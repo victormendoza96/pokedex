@@ -8515,6 +8515,11 @@ react-app-polyfill@^1.0.6:
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
 
+react-content-loader@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-5.1.0.tgz#7da2b75aefcdb2571df88ddc61a6f76a413ff616"
+  integrity sha512-80t5SYxLCXDvpaRRH/p4tV8RGGPBM7YAWwA+mARCJWRj4IkcEnJxkPGboBENgkBmyG4xsMAsa/dgy93DXoQ1dA==
+
 react-dev-utils@^10.2.1:
   version "10.2.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-10.2.1.tgz#f6de325ae25fa4d546d09df4bb1befdc6dd19c19"
@@ -10692,6 +10697,11 @@ worker-rpc@^0.1.0:
   integrity sha512-P1WjMrUB3qgJNI9jfmpZ/htmBEjFh//6l/5y8SD9hg1Ef5zTTVVoRjTrTEzPrNBQvmhMxkoTsjOXN10GWU7aCg==
   dependencies:
     microevent.ts "~0.1.1"
+
+wouter@^2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/wouter/-/wouter-2.5.1.tgz#f94c4fbc30cd35d3fec7c014115458e90e335c5e"
+  integrity sha512-MHBP/JWDVQKHzzO2i9bsGLFjap2FJ0SPtTASygGkLIdhwRuAhwIrINe83uSxeqkIjQW43LlzQuDC5TOAcIkROw==
 
 wrap-ansi@^5.1.0:
   version "5.1.0"

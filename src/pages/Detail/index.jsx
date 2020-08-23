@@ -13,6 +13,8 @@ export default function Detail({ params }) {
         setPokemonsCTX(pokemon);
         setLoadingPok(false);
       });
+    } else {
+      setLoadingPok(false);
     }
     // };
 

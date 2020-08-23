@@ -3,10 +3,20 @@ import CardPokemon from 'components/CardPokemon';
 import CardLoader from 'components/CardLoader';
 import './ListOfPokemons.css';
 function ListOfPokemons({ pokemonsData, loading, setSelectPok }) {
+  // <CardLoader />
+  const cardsLoading = [];
+  for (var i = 0; i === 4; i++) {
+    cardsLoading.push(<CardLoader key={`cardLoading-${i}`} />);
+  }
+
   return (
     <>
       {loading ? (
-        <CardLoader />
+        <div className="listPokemon ">
+          {[...Array(5)].map((x, i) => (
+            <CardLoader key={`cardLoading-${i}`} />
+          ))}
+        </div>
       ) : (
         <div className="listPokemon ">
           {pokemonsData.map(pokemon => (

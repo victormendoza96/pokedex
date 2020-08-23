@@ -4,8 +4,9 @@ import getPokemons from 'services/getPokemons';
 
 const INITIAL_PAGE = 0;
 
-export default function usePokemonsData() {
-  const [page, setPage] = useState(INITIAL_PAGE);
+export default function usePokemonsData(paramsPage) {
+
+  const [page, setPage] = useState(paramsPage || INITIAL_PAGE);
   const [loadingPok, setLoadingpok] = useState(true);
   const [pokemonsData, setPokemonsData] = useState([]);
 

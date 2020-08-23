@@ -1,16 +1,11 @@
 import React, { useContext } from 'react';
 import { Link } from 'wouter';
 import pokContext from 'context/PokemonContex';
+import ViewPokemon from 'components/ViewPokemon';
 import './PicPokemon.css';
-export default function PicPokemon({ defaultPok, pokemonPick, loading }) {
+export default function PicPokemon({ defaultPok, loading }) {
   const { PokemonsCTX } = useContext(pokContext);
   const selectedPok = PokemonsCTX || defaultPok;
-  const imagePok = selectedPok && selectedPok.sprites;
-  const ShowImagePok =
-    imagePok &&
-    (imagePok.other['official-artwork'].front_default ||
-      imagePok.other.dream_world.front_default ||
-      imagePok.front_default);
 
   return (
     <>
@@ -19,9 +14,7 @@ export default function PicPokemon({ defaultPok, pokemonPick, loading }) {
       ) : (
         <div className="PokemonPic">
           <Link to={`detail/${selectedPok.name}`}>features</Link>
-          <div className="pokemonPic_image-content">
-            <img src={ShowImagePok} alt="picpokemon" className="PokemonPic__img" />
-          </div>
+          <ViewPokemon images={selectedPok} />
           <div className="cardinfo">
             <div className="cardinfo__up">No.{selectedPok.id.toString().padStart(3, '0')}</div>
             <div className="cardinfo__down">{selectedPok.name}</div>

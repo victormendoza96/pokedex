@@ -1,5 +1,10 @@
-.homeGrid{
-  display:grid;
+.homeGrid {
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+}
+.homeGrid_group {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0px;
 }

@@ -10,7 +10,7 @@ export default function PicPokemon({ defaultPok, loading }) {
   return (
     <>
       {loading ? (
-        <p>loading...</p>
+        <img src="/pikachu-loading.gif" alt="loading" className="PokemonPic__img" />
       ) : (
         <div className="PokemonPic">
           <Link to={`detail/${selectedPok.name}`}>features</Link>

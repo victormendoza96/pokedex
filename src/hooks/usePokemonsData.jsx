@@ -5,15 +5,17 @@ import getPokemons from 'services/getPokemons';
 const INITIAL_PAGE = 0;
 
 export default function usePokemonsData(paramsPage) {
-
   const [page, setPage] = useState(paramsPage || INITIAL_PAGE);
   const [loadingPok, setLoadingpok] = useState(true);
   const [pokemonsData, setPokemonsData] = useState([]);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     setLoadingpok(true);
+    setIsError(false);
     async function fetchPokeData() {
       const pokemonsUrl = await getPokemons({ page });
+      !pokemonsUrl.length && setIsError(true);
       await loadingPokemons(pokemonsUrl);
       setLoadingpok(false);
     }
@@ -32,5 +34,5 @@ export default function usePokemonsData(paramsPage) {
     setPokemonsData(_pokemonsData);
   };
 
-  return { pokemonsData, loadingPok, setPage, page };
+  return { pokemonsData, loadingPok, setPage, page, isError };
 }

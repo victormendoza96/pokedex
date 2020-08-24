@@ -5,18 +5,22 @@ import HomePage from 'pages/Home';
 import Detail from 'pages/Detail';
 import ErrorPage from 'pages/ErrorPage';
 import { PokemonContextProvider } from 'context/PokemonContex';
+import NavBar from 'components/NavBar';
 function App() {
   return (
-    <div className="page">
-      <PokemonContextProvider>
-        <Switch>
-          <Route path="/" component={HomePage} />
-          <Route path="/:page" component={HomePage} />
-          <Route path="/detail/:name" component={Detail} />
-          <Route path="/:rest*" component={ErrorPage} />
-        </Switch>
-      </PokemonContextProvider>
-    </div>
+    <>
+      <NavBar />
+      <div className="page">
+        <PokemonContextProvider>
+          <Switch>
+            <Route path="/" component={HomePage} />
+            <Route path="/:page" component={HomePage} />
+            <Route path="/detail/:name" component={Detail} />
+            <Route path="/:rest*" component={ErrorPage} />
+          </Switch>
+        </PokemonContextProvider>
+      </div>
+    </>
   );
 }
 

@@ -7,10 +7,6 @@
 }
 
 .PokemonPic__img {
-  height: 400px;
-}
-
-.pokemonPic_image-content {
   background: rgb(252, 252, 252);
   background: -moz-radial-gradient(
     circle,
@@ -28,6 +24,11 @@
     rgba(0, 0, 0, 0.004639355742296902) 70%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcfcfc",endColorstr="#000000",GradientType=1);
+  height: 400px;
+}
+
+.pokemonPic_image-content {
+  text-align: center;
 }
 .cardinfo {
   display: flex;

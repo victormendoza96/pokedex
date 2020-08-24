@@ -1,12 +1,11 @@
 const fromApiResponseToPokemons = apiResponse => {
-  const h = ({ abilities, height, name } = apiResponse);
-  const pokemon = { abilities, height, name };
-  debugger;
-  return { name, height };
+  const { abilities, height, weight, name, stats, sprites, id } = apiResponse;
+  const statsPok = stats.map(statPok => {
+    const obj = { name: statPok.stat.name, value: statPok.base_stat };
+    return obj;
+  });
 
-  // const pokemons = results.map(pokemon => {
-  // });
-  // return pokemons;
+  return { abilities, height, weight, name, statsPok, sprites, id };
 };
 
 export default function getPokemon(name = 'pikachu') {
@@ -15,6 +14,6 @@ export default function getPokemon(name = 'pikachu') {
   return new Promise((resolve, reject) => {
     fetch(apiURL)
       .then(res => res.json())
-      .then(pokemon => resolve(fromApiResponseToPokemons(pokemon)));
+      .then(pokemon => resolve(pokemon));
   });
 }

@@ -1,0 +1,35 @@
+.DetailPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'features image image abilities'
+    'types  title title chart';
+}
+
+.DetailPage__features {
+  grid-area: features;
+}
+.DetailPage__image {
+  grid-area: image;
+}
+.DetailPage__types {
+  grid-area: types;
+}
+.DetailPage__chart {
+  grid-area: chart;
+}
+.DetailPage__abilities {
+  grid-area: abilities;
+}
+
+.DetailPage__title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+}
+
+.DetailPage__title p {
+  font-size: 25px;
+  border-bottom: 5px solid #a183da;
+}

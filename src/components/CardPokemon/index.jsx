@@ -3,7 +3,7 @@ import PokContext from 'context/PokemonContex';
 import './CardPokemon.css';
 
 export default function Card({ id, name, image, setSelectPok, pokeinfo }) {
-  const imagePok = image.other.dream_world.front_default || image.front_default;
+  const imagePok = image.other.dream_world.front_default || image.front_default || false;
   const { setPokemonsCTX } = useContext(PokContext);
 
   return (
@@ -13,8 +13,8 @@ export default function Card({ id, name, image, setSelectPok, pokeinfo }) {
         <span>No.{id.padStart(3, '0')}</span>
       </div>
       <div className="PokemonCard__body">
-        <img alt="pokeball-bg" src="/poke-bg.png" className="PokemonCard__image-bg" />
-        <img alt="pokeball" src={imagePok} className="PokemonCard__image" />
+        <img alt="pokeball-bg" src="/poke-bg.png" className={!!imagePok ? 'PokemonCard__image-bg' : 'd-none'} />
+        <img alt="pokeball" src={!!imagePok ? imagePok : '/error_image.png'} className="PokemonCard__image" />
         <p className="PokemonCard__text">{name}</p>
       </div>
     </div>

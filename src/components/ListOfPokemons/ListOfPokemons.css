@@ -1,7 +1,12 @@
 .listPokemon {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-template-rows: auto;
   justify-items: center;
   gap: 30px;
+}
+
+@media screen and (max-width: 960px), print {
+  .listPokemon {
+  }
 }

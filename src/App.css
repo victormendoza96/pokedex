@@ -22,15 +22,26 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#caafeb",endColorstr="#f2d3f3",GradientType=1);
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  color: #a5a5a5;
+}
+
 .d-none {
   display: none;
 }
 
-.error {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.d-only-mobile {
+  display: none !important;
+}
+
+.error,
+.full-center {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -70,6 +81,64 @@ body {
   padding: 50px;
 }
 
-.poiter {
+.pointer {
   cursor: pointer;
+}
+
+@media screen and (max-width: 960px), print {
+  .error__code {
+    font-size: 190px;
+  }
+
+  .error__image-error {
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 769px), print {
+  .d-none-mobile {
+    display: none !important;
+  }
+
+  .d-only-mobile {
+    display: block !important;
+  }
+
+  .error__code {
+    font-size: 140px;
+  }
+
+  .error__image-error {
+    height: 120px;
+  }
+
+  .error__table {
+    height: 60vh;
+  }
+
+  .error__text {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 576px), print {
+  .page {
+    padding: 30px 20px;
+  }
+
+  .error__code {
+    font-size: 90px;
+  }
+
+  .error__image-error {
+    height: 70px;
+  }
+
+  .error__table {
+    height: calc(80vh - 119px); /*navbar and padding */
+  }
+
+  .error__text {
+    font-size: 22px;
+  }
 }

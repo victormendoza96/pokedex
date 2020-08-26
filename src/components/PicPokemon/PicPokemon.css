@@ -4,9 +4,10 @@
   align-items: center;
   flex-direction: column;
   overflow: hidden;
+  height: 540px;
 }
 
-.PokemonPic__img {
+.principal-img {
   background: rgb(252, 252, 252);
   background: -moz-radial-gradient(
     circle,
@@ -24,7 +25,10 @@
     rgba(0, 0, 0, 0.004639355742296902) 70%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fcfcfc",endColorstr="#000000",GradientType=1);
-  height: 400px;
+
+  height: 100%;
+  width: auto;
+  max-height: 400px;
 }
 
 .pokemonPic_image-content {
@@ -61,4 +65,23 @@
   font-weight: bold;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 960px), print {
+  .principal-img {
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    max-height: none;
+  }
+}
+
+@media screen and (max-width: 769px), print {
+  .PokemonPic {
+    height: 440px;
+  }
+  .principal-img {
+    max-width: 300px;
+  }
 }

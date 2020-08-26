@@ -21,6 +21,7 @@
   padding: 0px 10px;
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
+  text-transform: capitalize;
 }
 
 .cardInfo__Value {
@@ -35,4 +36,23 @@
   padding: 0px 10px;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
+}
+
+@media screen and (max-width: 768px), print {
+  .cardInfo {
+    flex-direction: row;
+    height: 40px;
+    max-width: 210px;
+    width: 210px;
+  }
+  .cardInfo__Value {
+    font-size: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 15px;
+  }
+  .cardInfo__title {
+    font-size: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
 }

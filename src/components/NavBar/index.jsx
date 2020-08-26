@@ -8,13 +8,13 @@ export default function Navbar() {
     <div className="navbar">
       <div className="navbar__start">
         <Link to="/">
-          <img src="/pokemon.webp" alt="" className="poiter" />
+          <img src="/pokemon.webp" alt="" className="pointer" />
         </Link>
       </div>
       <div className="navbar__center">
         <img src="/pokeball2.jpg" alt="icono" />
-        <p>Registered pokemons</p>
-        <p>1048</p>
+        <p className="">1048</p>
+        <p className="d-none-mobile">pokemons</p>
       </div>
       <div className="navbar__end">
         <Clock />

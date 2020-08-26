@@ -9,14 +9,18 @@ export default function usePokemonsData(paramsPage) {
   const [loadingPok, setLoadingpok] = useState(true);
   const [pokemonsData, setPokemonsData] = useState([]);
   const [isError, setIsError] = useState(false);
+  const [hasNext, setHasNext] = useState(false);
+  const [hasPrevius, setHasPrevius] = useState(false);
 
   useEffect(() => {
     setLoadingpok(true);
     setIsError(false);
     async function fetchPokeData() {
-      const pokemonsUrl = await getPokemons({ page });
+      const [pokemonsUrl, next, prev] = await getPokemons({ page });
       !pokemonsUrl.length && setIsError(true);
       await loadingPokemons(pokemonsUrl);
+      setHasNext(next);
+      setHasPrevius(prev);
       setLoadingpok(false);
     }
 
@@ -34,5 +38,5 @@ export default function usePokemonsData(paramsPage) {
     setPokemonsData(_pokemonsData);
   };
 
-  return { pokemonsData, loadingPok, setPage, page, isError };
+  return { pokemonsData, loadingPok, setPage, page, isError, hasNext, hasPrevius };
 }

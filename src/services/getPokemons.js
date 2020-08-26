@@ -1,11 +1,13 @@
 const fromApiResponseToPokemons = apiResponse => {
-  const { results = [] } = apiResponse;
+  const { results = [], next, previous } = apiResponse;
   if (Array.isArray(results)) {
     const pokemons = results.map(pokemon => {
       const { name, url } = pokemon;
       return { name, url };
     });
-    return pokemons;
+    console.log(!!next);
+    console.log(!!previous);
+    return [pokemons, !!next, !!previous];
   }
   return [];
 };

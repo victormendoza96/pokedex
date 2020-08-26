@@ -15,6 +15,7 @@
   color: #fff;
   font-weight: bold;
   font-size: 20px;
+  text-transform: capitalize;
   max-width: 400px;
   min-width: 300px;
   padding: 5px;
@@ -49,6 +50,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  text-transform: capitalize;
   height: 35px;
   max-width: 350px;
   min-width: 250px;

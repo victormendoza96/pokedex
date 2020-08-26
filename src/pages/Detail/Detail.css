@@ -33,3 +33,42 @@
   font-size: 25px;
   border-bottom: 5px solid #a183da;
 }
+
+@media screen and (max-width: 960px), print {
+  .DetailPage {
+    grid-template-areas:
+      'features features image image'
+      'types types title title'
+      'abilities abilities chart chart';
+    row-gap: 20px;
+  }
+
+  .DetailPage__types {
+    grid-area: types;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-rows: auto;
+  }
+}
+
+@media screen and (max-width: 768px), print {
+  .DetailPage {
+    grid-template-areas:
+      'title title title title'
+      'image image image image'
+      'types types types types'
+      'features features features features'
+      'chart chart chart chart'
+      'abilities abilities abilities abilities';
+    row-gap: 20px;
+  }
+  .DetailPage__features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-rows: auto;
+    justify-items: center;
+  }
+  .DetailPage__types {
+    justify-items: center;
+  }
+}

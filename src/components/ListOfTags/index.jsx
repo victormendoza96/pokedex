@@ -5,7 +5,9 @@ export default function ListOfTags({ header, items }) {
     <div className="listOfTags">
       <div className="listOfTags__header">{header}</div>
       {items.map(item => (
-        <div className="listOfTags__tag">{item.ability.name}</div>
+        <div key={item.ability.name} className="listOfTags__tag">
+          {item.ability.name}
+        </div>
       ))}
     </div>
   );

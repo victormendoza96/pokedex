@@ -16,11 +16,11 @@ export default function ViewPokemon({ images, showModal }) {
 
   return (
     <div className="pokemonPic_image-content">
-      {imageload ? <img src="/pikachu-loading.gif" alt="loading" className="PokemonPic__img" /> : null}
+      {imageload ? <img src="/pikachu-loading.gif" alt="loading" className="principal-img" /> : null}
       <img
         src={image}
         alt="picpokemon"
-        className={imageload ? 'd-none' : 'PokemonPic__img'}
+        className={imageload ? 'd-none' : 'principal-img'}
         onLoad={() => setImageLoad(false)}
         onChange={() => setImageLoad(true)}
       />

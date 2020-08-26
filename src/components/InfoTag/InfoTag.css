@@ -27,6 +27,7 @@
   color: #fff;
   font-size: 22px;
   font-weight: bold;
+  text-transform: capitalize;
   width: 150px;
 }
 .infoTag__text::before {

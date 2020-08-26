@@ -1,0 +1,105 @@
+.initPage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'intro images'
+    'footer footer';
+  min-height: calc(100vh - 109px);
+  column-gap: 30px;
+}
+
+.initPage__intro {
+  grid-area: intro;
+}
+
+.initPage__images {
+  grid-area: images;
+}
+
+.initPage__footer {
+  grid-area: footer;
+  background-image: url(/city2.svg);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 200px;
+}
+
+.initPage__Title {
+  color: #fff;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.initPage__Title span {
+  font-weight: 400;
+}
+
+.initPage__Text {
+  color: #fff;
+  font-size: 20px;
+}
+.initPage__imgpdesk {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+.initPage__mobile {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+}
+
+.perspective {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.initPage__botton-img {
+  position: absolute;
+  bottom: 0px;
+}
+
+@media screen and (max-width: 960px), print {
+  .initPage__Title {
+    font-size: 70px;
+  }
+  .initPage__imgpdesk {
+    max-width: 300px;
+  }
+  .initPage__Text {
+    font-size: 18px;
+  }
+  .initPage__footer {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 768px), print {
+  .initPage {
+    grid-template-areas:
+      'intro intro'
+      'images images'
+      'footer footer';
+    row-gap: 30px;
+  }
+
+  .perspective {
+    margin-top: 20px;
+  }
+
+  .zigzag {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 576px), print {
+  .initPage__Title {
+    font-size: 40px;
+  }
+}

@@ -36,7 +36,7 @@ body {
   display: none;
 }
 
-.d-only-mobile {
+.d-only-mobile-grid {
   display: none !important;
 }
 
@@ -79,6 +79,7 @@ body {
   width: 100%;
   height: 100%;
   padding: 50px;
+  padding-bottom: 0px;
 }
 
 .pointer {
@@ -95,13 +96,13 @@ body {
   }
 }
 
-@media screen and (max-width: 769px), print {
+@media screen and (max-width: 768px), print {
   .d-none-mobile {
     display: none !important;
   }
 
-  .d-only-mobile {
-    display: block !important;
+  .d-only-mobile-grid {
+    display: grid !important;
   }
 
   .error__code {
@@ -123,7 +124,7 @@ body {
 
 @media screen and (max-width: 576px), print {
   .page {
-    padding: 30px 20px;
+    padding: 30px 20px 0px 20px;
   }
 
   .error__code {

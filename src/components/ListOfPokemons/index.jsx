@@ -14,16 +14,16 @@ function ListOfPokemons({ pokemonsData, loading, setSelectPok }) {
     <>
       {loading ? (
         <>
-        <div className="listPokemon d-none-mobile">
-          {[...Array(5)].map((x, i) => (
-            <CardLoader key={`cardLoading-${i}`} />
-          ))}
-        </div>
-        <div className="listPokemon d-only-mobile">
-          {[...Array(5)].map((x, i) => (
-            <CardMbLoader key={`cardMbLoading-${i}`} />
-          ))}
-        </div>
+          <div className="listPokemon d-none-mobile">
+            {[...Array(5)].map((x, i) => (
+              <CardLoader key={`cardLoading-${i}`} />
+            ))}
+          </div>
+          <div className="listPokemon d-only-mobile-grid">
+            {[...Array(5)].map((x, i) => (
+              <CardMbLoader key={`cardMbLoading-${i}`} />
+            ))}
+          </div>
         </>
       ) : (
         <div className="listPokemon ">

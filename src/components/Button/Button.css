@@ -17,12 +17,20 @@
   transition: all 0.15s ease-in-out;
 }
 
-.button--default:hover {
+.button--default:hover,
+.button--invert:hover {
   border-color: #a183da;
   font-weight: 700;
   box-shadow: 0 0 0 5px rgb(161 131 218 / 25%);
 }
 
+.button--invert {
+  background-color: #a183da;
+  color: white;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  transition: all 0.15s ease-in-out;
+}
 /* button border-line */
 
 .button--border-line {
@@ -113,4 +121,10 @@
   opacity: 1;
   right: 5px;
   bottom: 5px;
+}
+
+@media screen and (max-width: 576px), print {
+  .button--invert {
+    font-size: 18px;
+  }
 }

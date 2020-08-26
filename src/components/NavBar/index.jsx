@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar__start">
-        <Link to="/">
+        <Link to="/0">
           <img src="/pokemon.webp" alt="" className="pointer" />
         </Link>
       </div>

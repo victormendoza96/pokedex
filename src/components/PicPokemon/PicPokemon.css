@@ -77,11 +77,19 @@
   }
 }
 
-@media screen and (max-width: 769px), print {
+@media screen and (max-width: 768px), print {
   .PokemonPic {
     height: 440px;
   }
   .principal-img {
     max-width: 300px;
+  }
+}
+@media screen and (max-width: 576px), print {
+  .PokemonPic {
+    height: 380px;
+  }
+  .principal-img {
+    max-width: 245px;
   }
 }

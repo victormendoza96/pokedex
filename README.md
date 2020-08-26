@@ -2,9 +2,7 @@
 
 ## Running the app
 
-Connection to the API is mandatory. To test Facebook sign in process you need to use ngrok or a similar service to map your localhost address to a public DNS.
-
-For the first time, run `npm install`. Then, run `npm start`.
+For the first time, run `yarn install`. Then, run `yarn start`.
 
 ## Working with VS Code
 
